@@ -9,7 +9,7 @@ const errorMiddleware = (err, req, res, next) => {
        console.error(err);
        
         // Mongoose bad ObjectId error
-       if (err.name === 'CastError ') {
+       if (err.name === 'CastError') {
           const message= `Resource not found. Invalid: ${err.path}`;
           error = new Error(message);
           error.statusCode = 404;

@@ -10,8 +10,6 @@ subscriptionRouter.get("/", (req, res) => {
 });
 
 
-//Test route to get user subscriptions
-subscriptionRouter.get("/my", authorize,getUserSubscriptions);
 
 
 subscriptionRouter.get("/:id", (req, res) => {
@@ -29,9 +27,9 @@ subscriptionRouter.delete("/:id", (req, res) => {
   res.send({ title: "DELETE subscription" });
 });
 
-subscriptionRouter.get("/user/:id", (req, res) => {
-  res.send({ title: "GET all user subscriptions" });
-});
+subscriptionRouter.get("/user/:id", authorize, getUserSubscriptions);
+
+
 
 subscriptionRouter.put("/:id/cancel", (req, res) => {
   res.send({ title: "CANCEL user subscription" });

@@ -27,7 +27,7 @@ This project exposes an Express-based REST API for managing user subscriptions. 
 - MongoDB + Mongoose
 - JSON Web Tokens (JWT)
 - Arcjet
-- dotenv, morgan, cors
+- dotenv
 - Nodemon (for development)
 
 ---
